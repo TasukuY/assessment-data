@@ -13,5 +13,13 @@ def sales_reports(log_file):
         if day == "Mon":
             print(line)
 
+def over_10_melons_orders(log_file):
+    for line in log_file:
+        line = line.rstrip()
+        value = line.rstrip('\n').split(' ')
+        quantity_of_melon = int(value[2])
+        if quantity_of_melon > 10:
+            print(line)
 
-sales_reports(log_file)
+# sales_reports(log_file)
+over_10_melons_orders(log_file)
